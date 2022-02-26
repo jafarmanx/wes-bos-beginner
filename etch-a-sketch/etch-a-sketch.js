@@ -3,8 +3,9 @@ const canvas = document.querySelector('#etch-a-sketch');
 const ctx = canvas.getContext('2d');
 const shakebutton = document.querySelector('.shake');
 const MOVE_AMOUNT = 20;
-// setup our canvas for drawing
+let hue = 0;
 
+// setup our canvas for drawing
 const { width } = canvas;
 const { height } = canvas;
 
@@ -12,6 +13,8 @@ const { height } = canvas;
 let x = Math.floor(width * Math.random());
 let y = Math.floor(height * Math.random());
 
+// related to the painting object
+ctx.strokeStyle = `hsl(${hue},100%,50%)`
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 10;
@@ -24,6 +27,7 @@ ctx.stroke();
 // write a draw function
 function draw({ key }) {
   console.log(key);
+  ctx.strokeStyle = `hsl(${hue+=10},100%,50%)`
   ctx.beginPath();
   ctx.moveTo(x, y);
   // move our x and y based on input
@@ -55,11 +59,19 @@ function handleKey(e) {
   }
 }
 // clear /shake funtion
-
+function clearCanvas() {
+  canvas.classList.add('shake');
+  ctx.clearRect(0,0,width,height)
+  canvas.addEventListener (
+    'animationend', 
+    function(){
+      console.log('Haters gonna shake shake shake ')
+      canvas.classList.remove('shake')
+    },
+    {once:true} // this will remove the addEventListener
+  )
+}
 // listen for arrow keys
 window.addEventListener('keydown', handleKey);
-<<<<<<< HEAD
 
-// adding comments to this document
-=======
->>>>>>> fadafda (Add items)
+shakebutton.addEventListener('click', clearCanvas);
