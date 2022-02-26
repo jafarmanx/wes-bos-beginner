@@ -5,11 +5,7 @@ const shakebutton = document.querySelector('.shake');
 const MOVE_AMOUNT = 20;
 // setup our canvas for drawing
 
-<<<<<<< HEAD
 const { width } = canvas;
-=======
-const { width } = canvass;
->>>>>>> fadafda (Add items)
 const { height } = canvas;
 
 // Create Random x and y
