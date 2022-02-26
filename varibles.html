@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // <-- this requires declartions to be done correctly
+
+        // Varible declartion the var and let can be changed. const cannot change
+        let firstName = 'Ahsen'; // declaration of var "First Name"
+        let age = 36; // declaration of let "Age"
+        const person = true;
+        /*
+        var is function scoped
+        let and const are block scoped
+        */
+
+        // logging the Varibles to console
+        console.log('first');
+        console.log(firstName);
+        console.log(age);
+        console.log(person);
+
+        // Changing Varibles
+        firstName = 'Adam';
+        age = 14;
+        // person = false; // <--this is an error and will not work becuase its a const
+
+        // logging the Varibles to console
+        console.log('second');
+        console.log(firstName);
+        console.log(age);
+        console.log(person);
+
+        // const by default
+        // let if something needs to change
+        // naming convention is lowercase unless its a Class
+        // a-z _ $ are all valid for variables
+    </script>
+</body>
+</html>
