@@ -58,3 +58,5 @@ function handleKey(e) {
 
 // listen for arrow keys
 window.addEventListener('keydown', handleKey);
+
+// adding comments to this document
