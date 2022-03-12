@@ -1,5 +1,9 @@
-console.log(`it works!`);
-
 const cardButtons = document.querySelectorAll('.card button');
 
-console.log(cardButtons);
+function handleCardButtonClick() {
+  console.log('its ya boy');
+}
+
+cardButtons.forEach((button) =>
+  button.addEventListener('click', handleCardButtonClick)
+);
