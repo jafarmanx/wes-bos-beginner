@@ -6,16 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll Event</title>
     <style>
-        button[dsiabled]{
-            opacity: 0.1;
+        body {
+            background-color:orange ;
         }
-        .terms-and-condition {
+        button{
+            background-color: black;
+            opacity: 0.5;
+            color: aliceblue; 
+            padding: 10px;       
+        }
+        .on{
+            background-color: blue;
+            opacity: 1;     
+        }
+        .terms-and-conditions {
             overflow: scroll;
+            overflow-x:hidden;       
+        }
+        p {
+            padding: 5px  25px;
+        }
+        .box {
+            background-color: aliceblue;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 60px;
+            position: relative;
+            
         }
     </style>
-    <script src="./scrollevent.js"></script>
+
 </head>
 <body>
-    
+    <div class="box">
+        <div class="terms-and-conditions">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Tempore officia sunt, optio sequi doloremque laudantium facilis 
+                distinctio totam qui laboriosam temporibus omnis voluptatibus corporis libero ea
+                repellendus ab dolorem fugit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime minima recusandae praesentium, reiciendis suscipit vero commodi debitis facere animi voluptatum quos, cum eum ipsum illum distinctio nisi tempore. Quidem.
+                Quae ex commodi sequi ratione culpa corporis aliquid error repellat. Explicabo pariatur ad, perspiciatis earum at ab excepturi quia accusamus voluptate autem exercitationem dolore expedita doloremque, quibusdam cum quo ex.
+                Quae aliquid iusto iure at? Delectus quisquam ipsam repudiandae recusandae! Ab, est amet. Accusantium quis error quibusdam possimus dolor, asperiores voluptas atque, sit doloribus harum commodi numquam tempore tempora? Illo.
+                Amet nihil corrupti nisi commodi recusandae nulla at id laborum. Minima commodi magni veritatis laboriosam nostrum ducimus pariatur vitae atque iure, ipsam quod blanditiis! Optio nemo delectus praesentium molestias ab?
+                Modi, sapiente laborum sequi voluptates nulla molestias quas repellat illo exercitationem quia temporibus suscipit perferendis mollitia. Alias commodi quaerat repellendus delectus voluptate officia asperiores aliquid quae recusandae, fugit nam doloremque!
+                Atque mollitia dolores nesciunt vero asperiores? Aliquam quisquam aut expedita veritatis odio sapiente labore dignissimos! Sint beatae perferendis, voluptas deleniti quis totam. Saepe hic magnam vitae beatae incidunt sed atque.
+                Nam enim, perspiciatis laboriosam deserunt iusto amet harum rem hic excepturi. Esse est dolorum aperiam delectus atque officiis veniam ipsa tempora explicabo, unde ullam possimus architecto ipsam excepturi hic obcaecati!
+                Qui delectus recusandae culpa aliquam eaque explicabo tempora harum, labore architecto aspernatur blanditiis dolorem fugiat totam, exercitationem suscipit quas perspiciatis, incidunt similique? Laudantium voluptatem esse explicabo dignissimos nobis architecto praesentium.
+                Recusandae quisquam odio tenetur expedita ratione pariatur eum nostrum ipsum quis quaerat quo necessitatibus, iusto, placeat voluptate officia laudantium quos similique eius porro animi iste. Illo expedita incidunt perspiciatis quam!
+                Voluptatem vel nostrum praesentium, exercitationem fugit fugiat, deleniti saepe dignissimos voluptatibus, adipisci labore doloribus quo tempora suscipit provident magnam sapiente est blanditiis dicta laborum? Exercitationem neque cum iste impedit repudiandae!
+            </p>
+            <hr>
+        </div>
+        <button disabled>Accept</button>
+    </div>
+    <script src="./scrollevent.js"></script>
 </body>
 </html>
