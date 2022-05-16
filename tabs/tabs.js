@@ -4,9 +4,15 @@ const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
 
 function handleTabCLick(event){
     const id = event.currentTarget.id
-    console.log(event.currentTarget)
-    console.log(id)
     // hide all tab panles
+    tabButtons.forEach(
+        tab => {
+            if(tab.id == id ){
+                tab.setAttribute('aria-selected', true)
+            }
+            else {tab.setAttribute('aria-selected', false)}
+        }
+    );
     tabPanels.forEach(
         tabpanel => 
             { 
@@ -16,11 +22,14 @@ function handleTabCLick(event){
                 }
                 
             }
-        );
-    
-    
 
-
+            /*
+                // other Method  
+                const tabpanel = tabs.querySelector(`[araia-labelledby = "${id}"]`);
+                console.log(tabpanel);
+                tabpanel.hidden = false;
+            */
+        );  
 }
 
 tabButtons.forEach(button => button.addEventListener('click',handleTabCLick));
