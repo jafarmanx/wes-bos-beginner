@@ -1,0 +1,6 @@
+Data Acquisition Setup 
+- Connected to VPN to get access to Database
+
+
+
+Load Data
