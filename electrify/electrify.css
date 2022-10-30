@@ -14,8 +14,14 @@ body{
     height: 100vh;
 }
 .st0 {
-    fill: none;
+    fill: #efeff0;
+    stroke:#000080;
+    stroke-dasharray: 4px;
+    stroke-dashoffset: 2px;
+    stroke-width: 3px;
+    animation: lightning 2s cubic-bezier(.25,.25,.25,.25) infinite;
 }
+
 svg{
     width: 650px;
     height: 220px;
@@ -35,4 +41,20 @@ svg{
                  0px 0px 40px #6c6cdc,
                  0px 0px 60px #6c6cdc,
     
+}
+
+@keyframes lightning {
+    0% {
+        stroke-dashoffset: 2px;
+        stroke: #b2b2ec;
+    }
+    50% {
+        stroke:#000080;
+        stroke-dashoffset: 322px;
+    }
+    100% {
+        stroke:#b8b8ef;
+        stroke-dashoffset: 300px;
+    }
+
 }
