@@ -1,5 +1,31 @@
 console.log('It works!');
 
+logo = document.querySelector('a');
+greetings = document.querySelector('.greetings');
+
+const fadeout = function(selector) {
+     selector.style.animation = 'fadeout 1s ease-out';
+     selector.addEventListener('animationend', function() {
+        hide(selector);
+    })
+    console.log('fadeout');
+}
+const hide = function(selector) {
+    selector.style.display = 'none';
+}
+const show = function(selector) {
+    selector.style.display = 'block';
+    selector.style.animation = 'fadein 2s ease-in';
+    console.log('show');
+}
+
+
+
+greetings.addEventListener('click', function() {
+    fadeout(greetings);
+    show(logo);
+});
+
 // Javascript program to check whether there
  // exist at least k or not in range [2..n]
   

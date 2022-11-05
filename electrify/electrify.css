@@ -20,7 +20,7 @@ body{
     font-weight: 300;
     margin-bottom: 1rem;
     text-align: center;
-    animation: fadeout ease-out 3s;
+    
 }
 
 a {
@@ -66,6 +66,14 @@ svg{
     }
     100% {
         opacity: 0;
-        display: none;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
