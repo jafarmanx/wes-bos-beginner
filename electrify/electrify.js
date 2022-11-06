@@ -20,10 +20,10 @@ const show = function(selector) {
 }
 
 
-
 greetings.addEventListener('click', function() {
     fadeout(greetings);
-    show(logo);
+    setTimeout(function() {show(logo);}, 2000);
+    
 });
 
 // Javascript program to check whether there
